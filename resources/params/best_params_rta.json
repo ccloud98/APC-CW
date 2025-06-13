@@ -1,0 +1,34 @@
+{
+"NN-Transformer": {"max_size": 11, "n_neg": 500, "n_hard": 18, "n_easy": 53, "batch_size": 128, "n_epochs": 30, "lr": 0.13, "patience": 8, "step_every": 1000, 
+"factor": 0.5, "wd": 0.0, "mom": 0.9, "nesterov": true, "clip": 1.0, "d": 128, "n_att_heads": 8, "n_att_layers": 1, "drop_att": 0.0, "n_heads": 8, "n_layers": 1, "drop_p": 0.1},
+
+"FM-Transformer": {"max_size": 11, "n_neg": 1000, "n_hard": 37, "n_easy": 3, "batch_size": 128, "n_epochs": 30, "lr": 1.0, "patience": 12, "step_every": 1000, 
+"factor": 0.5, "wd": 0.0, "mom": 0.9, "nesterov": true, "clip": 1.0, "drop_p": 0.0, "n_layers": 1, "n_heads": 8, "d": 128}, 
+
+"MF-Transformer": {"max_size": 11, "n_neg": 1000, "n_hard": 40, "n_easy": 10, "batch_size": 128, "n_epochs": 18, "lr": 1.0, "patience": 12, "step_every": 1000, 
+"factor": 0.5, "wd": 1.5300000000000003e-05, "mom": 0.9, "nesterov": true, "clip": 1.0, "drop_p": 0.13, "n_layers": 1, "n_heads": 8, "d": 128}, 
+
+"MF-GRU": {"max_size": 11, "n_neg": 1000, "n_hard": 40, "n_easy": 10, "batch_size": 128, "n_epochs": 16, "lr": 0.63, "patience": 12, "step_every": 1000, 
+"factor": 0.5, "wd": 1.5300000000000003e-05, "mom": 0.9, "nesterov": true, "clip": 1.0, "drop_p": 0.0, "n_layers": 2, "h_dim": 400, "d": 128}, 
+
+"MF-AVG": {"max_size": 11, "n_neg": 1000, "n_hard": 40, "n_easy": 10, "batch_size": 128, "n_epochs": 1, "lr": 0.01, "patience": 8, "step_every": 1000, 
+"factor": 0.5, "wd": 5.300000000000001e-06, "mom": 0.9, "nesterov": true, "clip": 1.0, "d": 128}, 
+
+"MF-CNN": {"d": 128, "n_layers": 2, "kernel_size": 3, "conv_size": 444, "res_block_count": 3, "k_pool": 1, "drop_p": 0.2, "mom": 0.9, "lr": 0.5, "wd": 1.9e-05, 
+"nesterov": true, "max_size": 11, "n_neg": 500, "n_hard": 18, "n_easy": 53, "batch_size": 128, "n_epochs": 10, "patience": 8, "step_every": 1000, "factor": 0.5, "clip": 1.0},
+
+"MF-TFIDF": {"max_size": 11, "n_neg": 1000, "n_hard": 40, "n_easy": 10, "batch_size": 128, "n_epochs": 18, "lr": 1.0, "patience": 12, "step_every": 1000, 
+"factor": 0.5, "wd": 1.5300000000000003e-05, "mom": 0.9, "nesterov": true, "clip": 1.0, "drop_p": 0.13, "n_layers": 1, "n_heads": 8, "d": 128}, 
+
+"MUSE": {"k": 1500, "n_items": 2262292, "hidden_size": 128, "lr": 0.005, "batch_size": 256, "alpha": 0.5, 
+"inv_coeff": 1.0, "var_coeff": 0.5, "cov_coeff": 0.25, "n_layers": 1, "maxlen": 50, "dropout": 0.2, 
+"embedding_dim": 256, "n_sample": 5000, "step": 1, "epochs": 30},
+
+"LARP": { "k": 1500,"n_sample": 1000, "hidden_size": 768, "n_layers": 12, "num_heads": 12, "intermediate_size": 3072, "method": "average", "queue_size": 57600, 
+"momentum": 0.995, "training_params": { "lr": 0.001, "wd": 1e-5, "n_epochs": 30, "sample_size": 2000, "batch_size": 64 }
+},
+"PISA": {"n_sample": 5000, "sampling": "recent", "embed_dim": 256, "queue_size": 57600, "momentum": 0.995, 
+"session_key": "SessionId", "item_key": "ItemId", "time_key": "Time", "training_params": 
+  {"n_epochs": 30, "batch_size": 64, "lr": 0.001, "wd": 1e-05, "mom": 0.9, "nesterov": true, "patience": 2, "factor": 0.5, "n_neg": 10, "max_size": 50, "clip": 5}
+}
+}
